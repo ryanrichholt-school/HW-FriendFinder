@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FriendFinderSurvey</title>
+
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	      
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<style>
+		.thumbs {
+		  margin-left: 20px;
+		  vertical-align: baseline;
+		  position: relative;
+		  top:20px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="row">
+	    <form class="col s8 offset-s2" id="survey">
+	      <h1>Friend Finder Survey</h1>
+	      <p>Answer these 10 easy questions to be matched with your best friend, guaranteed!</p>
+		  <hr>
+	      <div class="row">
+	      	<h4>Contact:</h4>
+	        <div class="input-field col s6">
+	          <i class="material-icons prefix">edit</i>
+	          <input id="first_name" type="text" class="validate">
+	          <label for="first_name">First Name</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <i class="material-icons prefix">edit</i>
+	          <input id="last_name" type="text" class="validate">
+	          <label for="last_name">Last Name</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <i class="material-icons prefix">email</i>
+	          <input id="email" type="email" class="validate">
+	          <label for="email">Email</label>
+	        </div>
+	      </div>
+	       <div class="row">
+	        <div class="input-field col s12">
+	          <i class="material-icons prefix">account_circle</i>
+	          <input id="email" type="url" class="validate">
+	          <label for="email">Link to profile pic</label>
+	        </div>
+	      </div>
+	      <hr>
+
+	      <div class="row">
+	      	<h4>Questions:</h4>
+	      	<p>For each statement below, choose how much you either disagree or agree by moving 
+	      	towards thumbs up, or thumbs down!</p>
+	      	<br>
+
+	      	<div class="card-panel">
+		      	<div class="row">
+		      		<strong>Pets are awesome! I love dogs, cats, birds, fish, etc...</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="pets" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="card-panel">
+		      	<div class="row">
+		      		<strong>Healthy foods and activities are very important to me.</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="healthy" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="card-panel">
+		      	<div class="row">
+		      		<strong>My favorite type of movies are comedies</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="comedy" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="card-panel">
+		      	<div class="row">
+		      		<strong>My favorite types of movies are horror movies</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="horror" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="card-panel">
+		      	<div class="row">
+		      		<strong>I love traveling</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="travel" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="card-panel">
+		      	<div class="row">
+		      		<strong>Work is very important to me</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="work" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="card-panel">
+		      	<div class="row">
+		      		<strong>I enjoy drinking alcohol (in moderation).</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="alcohol" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="card-panel">
+		      	<div class="row">
+		      		<strong>Religion is very important to me.</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="religion" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="card-panel">
+		      	<div class="row">
+		      		<strong>Having a family is important to me.</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="kids" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="card-panel">
+		      	<div class="row">
+		      		<strong>I enjoy discussing politics.</strong>
+		      		<hr>
+			      	<div class="col s1 "><i class="material-icons thumbs">thumb_down</i></div>
+			      	<div class="input-field col s10">
+			      		<input type="range" id="politics" min=0 max=100/>
+		      		</div>
+		      		<div class="col s1 "><i class="material-icons thumbs">thumb_up</i></div>
+		      	</div>
+		    </div>
+
+		    <div class="center-align">
+			    <button class="btn waves-effect waves-light" type="submit" id="submitSurvey">Find me a friend!
+	    			<i class="material-icons right">send</i>
+	  			</button>
+	  		</div>
+
+    	  </div>
+
+	    </form>
+	  </div>
+
+<div id="modal1" class="modal">
+	<div class="modal-content">
+		<h4>You Matched!</h4>
+		<hr>
+		<img id='matchPic' src="" height="400">
+		<p id='matchName'></p>
+		<h4>Contact them now:</h4>
+		<p id='matchContact'></p>
+	</div>
+	<div class="modal-footer">
+		<a href="/" class="modal-action modal-close waves-effect waves-green btn-flat">Return Home</a>
+	</div>
+</div> 
+
+<script type="text/javascript">
+
+	$('#submitSurvey').on('click', function(event){
+		event.preventDefault();
+
+		var formData = {
+			first_name: $('#first_name').val(),
+			last_name: $('#last_name').val(),
+			email: $('#email').val(),
+			picUrl: $('#picUrl').val(),
+			pets: $('#pets').val(),
+			healthy: $('#healthy').val(),
+			comedy: $('#comedy').val(),
+			horror: $('#horror').val(),
+			travel: $('#travel').val(),
+			work: $('#work').val(),
+			alcohol: $('#alcohol').val(),
+			religion: $('#religion').val(),
+			kids: $('#kids').val(),
+			politics: $('#politics').val()
+		}
+
+		$("#survey")[0].reset();
+
+		$.ajax({
+		  type: "POST",
+		  url: "/api/friends",
+		  data: JSON.stringify(formData),
+		  dataType: "json",
+		  contentType : "application/json"
+		}).then(function(res){
+			$('#modal1').modal();
+			$('#matchPic').attr({src: res.picUrl});
+			$('#matchName').text(res.first_name);
+			$('#matchContact').text(res.email);
+			$('#modal1').modal('open');
+		});
+	})
+	
+</script>
+</body>
